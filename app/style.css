@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500&display=swap');
+:root {
+  --color-main: hsl(222, 26%, 31%);
+  --color-toggle: hsl(223, 31%, 20%);
+  --color-screen: hsl(224, 36%, 15%);
+
+  --text-color-dark: hsl(221, 14%, 31%);
+  --text-color-white: hsl(0, 0, 100%);
+
+  --text-Light-yellow: hsl(52, 100%, 62%);
+  --text-Very-dark: hsl(198, 20%, 13%);
+  --text-White: hsl(0, 0, 100%);
+
+  --text-weight: 700;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Spartan', sans-serif;
+}
+input:focus {
+  outline: none;
+}
+.flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-main);
+}
+.app {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rebeccapurple;
+  padding: 1rem;
+}
+.app div {
+  margin: 1rem 0;
+}
+.sec1 {
+  display: flex;
+  color: white;
+  width: 100%;
+  justify-content: space-between;
+}
+.sec1 div {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.sec1 div p {
+  font-size: 0.6rem;
+  font-weight: var(--text-weight);
+}
+
+.sec2 {
+  background-color: var(--color-screen);
+  width: 100%;
+  height: 7rem;
+  border-radius: 0.5rem;
+  padding: 1rem 2rem;
+}
+.sec2 input {
+  background: transparent;
+  border: none;
+  color: white;
+  /* background-color: aqua; */
+  text-align: right;
+  font-size: 2em;
+  font-weight: var(--text-weight);
+  height: 100%;
+  width: 100%;
+}
+
+.sec3 {
+  background-color: var(--color-toggle);
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 1.2rem;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.sec3 div {
+}
+
+.colorAll {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+.colorOne {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+}
+.colorOne div {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.colorOne div:first-child {
+  background-color: hsl(222, 26%, 31%);
+  color: var(--text-color-white);
+}
+
+.colorOne div:nth-child(2) {
+  background-color: hsl(223, 31%, 20%);
+}
+.colorOne div:last-child {
+  background-color: hsl(224, 36%, 15%);
+}
