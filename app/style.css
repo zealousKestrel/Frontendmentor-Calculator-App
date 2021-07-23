@@ -1,15 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500&display=swap');
 :root {
+  /* Theme 1 */
   --color-main: hsl(222, 26%, 31%);
   --color-toggle: hsl(223, 31%, 20%);
   --color-screen: hsl(224, 36%, 15%);
 
+  --keys-bg-darkBlue: hsl(225, 21%, 49%);
+  --keys-shadow-darkBlue: hsl(224, 28%, 35%);
+  --keys-red: hsl(6, 63%, 50%);
+  --keys-dark-red: hsl(6, 70%, 34%);
+  --keys-bg-grayish: hsl(30, 25%, 89%);
+  --keys-shadow-grayish: hsl(28, 16%, 65%);
+
   --text-color-dark: hsl(221, 14%, 31%);
   --text-color-white: hsl(0, 0, 100%);
 
-  --text-Light-yellow: hsl(52, 100%, 62%);
+  /* --text-Light-yellow: hsl(52, 100%, 62%);
   --text-Very-dark: hsl(198, 20%, 13%);
-  --text-White: hsl(0, 0, 100%);
+  --text-White: hsl(0, 0, 100%); */
 
   --text-weight: 700;
 }
@@ -29,6 +37,7 @@ input:focus {
 }
 .container {
 }
+
 .main {
   display: flex;
   justify-content: center;
@@ -43,11 +52,11 @@ input:focus {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rebeccapurple;
+  /* background-color: rebeccapurple; */
   padding: 1rem;
 }
 .app div {
-  margin: 1rem 0;
+  margin: 0.5rem 0;
 }
 .sec1 {
   display: flex;
@@ -64,6 +73,21 @@ input:focus {
 .sec1 div p {
   font-size: 0.6rem;
   font-weight: var(--text-weight);
+}
+.sec1side input {
+  background: var(--color-toggle);
+  border-radius: 15px;
+  color: aqua;
+  -webkit-appearance: none;
+  width: 5rem;
+}
+.sec1side input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  cursor: pointer;
+  height: 15px;
+  background: var(--keys-red);
+  border-radius: 50%;
+  width: 15px;
 }
 
 .sec2 {
@@ -86,21 +110,71 @@ input:focus {
 }
 
 .sec3 {
+  width: 100%;
+  height: 100%;
+  padding: 1.2rem;
   background-color: var(--color-toggle);
   border-radius: 0.5rem;
-  width: 100%;
-  padding: 1.2rem;
+}
+.sec3-keys {
   display: grid;
   grid-template-columns: auto auto auto auto;
+  gap: 1rem;
+}
+.sec3-function {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 1rem;
 }
 
-.sec3 div {
+.sec3 button {
+  padding: 1.5rem 0.2rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-size: 2 rem;
+  text-align: center;
+  border: none;
+  position: relative;
 }
+.sec3 button:active {
+  top: 3px;
+  box-shadow: none;
+}
+
+.keys-bg-grayish {
+  color: var(--color-main);
+  background-color: var(--keys-bg-grayish);
+  box-shadow: 0 5px var(--keys-shadow-grayish);
+}
+.keys-bg-red {
+  color: var(--keys-bg-grayish);
+  background-color: var(--keys-red);
+  box-shadow: 0 5px var(--keys-dark-red);
+}
+.keys-bg-darkBlue {
+  color: var(--keys-bg-grayish);
+  background-color: var(--keys-bg-darkBlue);
+  box-shadow: 0 5px var(--keys-shadow-darkBlue);
+}
+
+/* .keys-bg-grayish:hover {
+  background-color: var(--keys-bg-grayish);
+  box-shadow: 0 2px var(--keys-shadow-grayish);
+}
+.keys-bg-red:hover {
+  background-color: var(--keys-red);
+  box-shadow: 0 2px var(--keys-dark-red);
+}
+.keys-bg-darkBlue:hover {
+  background-color: var(--keys-bg-darkBlue);
+  box-shadow: 0 2px var(--keys-shadow-darkBlue);
+} */
 
 .colorAll {
   display: flex;
   align-self: center;
   justify-content: center;
+  flex-direction: column;
 }
 .colorOne {
   display: flex;
