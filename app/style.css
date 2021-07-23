@@ -15,27 +15,24 @@
   --text-color-dark: hsl(221, 14%, 31%);
   --text-color-white: hsl(0, 0, 100%);
 
-  /* --text-Light-yellow: hsl(52, 100%, 62%);
-  --text-Very-dark: hsl(198, 20%, 13%);
-  --text-White: hsl(0, 0, 100%); */
-
   --text-weight: 700;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Spartan', sans-serif;
 }
+
 input:focus {
   outline: none;
 }
+
 .flexCenter {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.container {
 }
 
 .main {
@@ -46,41 +43,57 @@ input:focus {
   min-height: 100vh;
   background-color: var(--color-main);
 }
+
 .app {
-  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: rebeccapurple; */
   padding: 1rem;
 }
+
 .app div {
   margin: 0.5rem 0;
 }
+
 .sec1 {
   display: flex;
   color: white;
   width: 100%;
   justify-content: space-between;
 }
-.sec1 div {
+
+.sec1 .sec1side {
   display: flex;
   gap: 1rem;
   justify-content: center;
   align-items: center;
 }
+
+.sec1side {
+  position: relative;
+}
+
 .sec1 div p {
   font-size: 0.6rem;
   font-weight: var(--text-weight);
 }
+
 .sec1side input {
   background: var(--color-toggle);
   border-radius: 15px;
-  color: aqua;
   -webkit-appearance: none;
   width: 5rem;
 }
+
+.sec1side::before {
+  content: '1 2 3';
+  position: absolute;
+  top: -1.5rem;
+  right: 2rem;
+  font-weight: var(--text-weight);
+}
+
 .sec1side input::-webkit-slider-thumb {
   -webkit-appearance: none;
   cursor: pointer;
@@ -89,49 +102,53 @@ input:focus {
   border-radius: 50%;
   width: 15px;
 }
+/* .sec1side input::{
+  -webkit-appearance: none;
+  cursor: pointer;
+  height: 15px;
+  background: var(--keys-red);
+  border-radius: 50%;
+  width: 15px;
+} */
 
 .sec2 {
   background-color: var(--color-screen);
   width: 100%;
-  height: 7rem;
+  min-height: 6rem;
   border-radius: 0.5rem;
   padding: 1rem 2rem;
 }
+
 .sec2 input {
   background: transparent;
   border: none;
   color: white;
-  /* background-color: aqua; */
   text-align: right;
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: var(--text-weight);
-  height: 100%;
+  min-height: 4rem;
   width: 100%;
 }
 
 .sec3 {
   width: 100%;
-  height: 100%;
   padding: 1.2rem;
   background-color: var(--color-toggle);
   border-radius: 0.5rem;
 }
+
 .sec3-keys {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  grid-template-columns: repeat(1fr, 4);
   gap: 1rem;
-}
-.sec3-function {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 1rem;
+  grid-template-areas: 'box7 box8 box9 boxdel' 'box4 box5 box6 boxplus' 'box1 box2 box3 boxmin' 'boxdot box0 boxslash boxx' 'reset reset boxequal boxequal';
 }
 
 .sec3 button {
   padding: 1.5rem 0.2rem;
   border-radius: 0.5rem;
   font-weight: bold;
-  font-size: 2 rem;
+  font-size: 1rem;
   text-align: center;
   border: none;
   position: relative;
@@ -155,6 +172,20 @@ input:focus {
   color: var(--keys-bg-grayish);
   background-color: var(--keys-bg-darkBlue);
   box-shadow: 0 5px var(--keys-shadow-darkBlue);
+}
+
+.errorValue {
+  border: 1px solid var(--keys-red);
+}
+
+@media (max-width: 922px) {
+  .sec3 {
+    padding: 1rem;
+  }
+  .sec3 button {
+    padding: 0.8rem 0.8rem;
+    font-size: 0.6rem;
+  }
 }
 
 /* .keys-bg-grayish:hover {
@@ -183,8 +214,8 @@ input:focus {
 }
 .colorOne div {
   margin: 0.5rem;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
+  padding: 0.5rem; */
+  der-radius: 0.5rem;
 }
 .colorOne div:first-child {
   background-color: hsl(222, 26%, 31%);

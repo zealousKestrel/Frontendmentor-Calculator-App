@@ -35,35 +35,150 @@
           <h2>Calc</h2>
           <div class="sec1side">
             <p>THEME</p>
-            <input type="range" max="2" />
+            <input type="range" max="2" value="1" />
           </div>
         </div>
         <div class="sec2 flexCenter">
-          <input type="text" />
+          <input
+            id="screeninput"
+            type="text"
+            onkeypress="return isnumber(event)"
+          />
         </div>
         <div class="sec3">
           <div class="sec3-keys">
-            <button class="grid-item keys-bg-grayish"><h1>7</h1></button>
-            <button class="grid-item keys-bg-grayish"><h1>8</h1></button>
-            <button class="grid-item keys-bg-grayish"><h1>9</h1></button>
-            <button class="grid-item keys-bg-darkBlue"><h1>del</h1></button>
-            <button class="grid-item keys-bg-grayish"><h1>4</h1></button>
-            <button class="grid-item keys-bg-grayish"><h1>5</h1></button>
-            <button class="grid-item keys-bg-grayish"><h1>6</h1></button>
-            <button class="grid-item keys-bg-grayish"><h1>+</h1></button>
-            <button class="grid-item keys-bg-grayish"><h1>1</h1></button>
-            <button class="grid-item keys-bg-grayish"><h1>2</h1></button>
-            <button class="grid-item keys-bg-grayish"><h1>3</h1></button>
-            <button class="grid-item keys-bg-grayish"><h1>-</h1></button>
-            <button class="grid-item keys-bg-grayish"><h1>.</h1></button>
-            <button class="grid-item keys-bg-grayish"><h1>0</h1></button>
-            <button class="grid-item keys-bg-grayish"><h1>/</h1></button>
-            <button class="grid-item keys-bg-grayish"><h1>X</h1></button>
+            <button
+              data-value="1"
+              class="grid-item keys-bg-grayish"
+              style="grid-area: box1"
+            >
+              <h1>1</h1>
+            </button>
+            <button
+              data-value="2"
+              class="grid-item keys-bg-grayish"
+              style="grid-area: box2"
+            >
+              <h1>2</h1>
+            </button>
+            <button
+              data-value="3"
+              class="grid-item keys-bg-grayish"
+              style="grid-area: box3"
+            >
+              <h1>3</h1>
+            </button>
+            <button
+              data-value="4"
+              class="grid-item keys-bg-grayish"
+              style="grid-area: box4"
+            >
+              <h1>4</h1>
+            </button>
+            <button
+              data-value="5"
+              class="grid-item keys-bg-grayish"
+              style="grid-area: box5"
+            >
+              <h1>5</h1>
+            </button>
+            <button
+              data-value="6"
+              class="grid-item keys-bg-grayish"
+              style="grid-area: box6"
+            >
+              <h1>6</h1>
+            </button>
+            <button
+              data-value="7"
+              class="grid-item keys-bg-grayish"
+              style="grid-area: box7"
+            >
+              <h1>7</h1>
+            </button>
+            <button
+              data-value="8"
+              class="grid-item keys-bg-grayish"
+              style="grid-area: box8"
+            >
+              <h1>8</h1>
+            </button>
+
+            <button
+              data-value="9"
+              class="grid-item keys-bg-grayish"
+              style="grid-area: box9"
+            >
+              <h1>9</h1>
+            </button>
+            <button
+              id="delbutton"
+              class="grid-item keys-bg-darkBlue"
+              style="grid-area: boxdel"
+            >
+              <h1>DEL</h1>
+            </button>
+            <button
+              class="grid-item keys-bg-grayish"
+              style="grid-area: boxplus"
+              data-value="+"
+            >
+              <h1>+</h1>
+            </button>
+            <button
+              class="grid-item keys-bg-grayish"
+              style="grid-area: boxmin"
+              data-value="-"
+            >
+              <h1>-</h1>
+            </button>
+            <button
+              class="grid-item keys-bg-grayish"
+              style="grid-area: boxdot"
+              data-value="."
+            >
+              <h1>.</h1>
+            </button>
+            <button
+              class="grid-item keys-bg-grayish"
+              style="grid-area: box0"
+              data-value="0"
+            >
+              <h1>0</h1>
+            </button>
+            <button
+              class="grid-item keys-bg-grayish"
+              style="grid-area: boxslash"
+              data-value="/"
+            >
+              <h1>/</h1>
+            </button>
+            <button
+              class="grid-item keys-bg-grayish"
+              style="grid-area: boxx"
+              data-value="*"
+            >
+              <h1>X</h1>
+            </button>
+            <button
+              id="reset"
+              class="grid-item keys-bg-darkBlue"
+              style="grid-area: reset"
+            >
+              <h1>RESET</h1>
+            </button>
+            <button
+              id="equal"
+              class="grid-item keys-bg-red"
+              style="grid-area: boxequal"
+            >
+              <h1>=</h1>
+            </button>
           </div>
-          <div class="sec3-function">
+          <!-- <div class="sec3-function">
             <button class="grid-item keys-bg-darkBlue"><h1>RESET</h1></button>
             <button class="grid-item keys-bg-red"><h1>=</h1></button>
-          </div>
+          </div> -->
         </div>
       </div>
 
@@ -71,6 +186,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">ZealousKestrel</a>.
   </div> -->
+      <script src="./index.js"></script>
     </div>
   </body>
 </html>
